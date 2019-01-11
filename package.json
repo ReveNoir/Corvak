@@ -1,0 +1,30 @@
+{
+  "name": "corvak",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "babel-node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReveNoir/Corvak.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReveNoir/Corvak/issues"
+  },
+  "homepage": "https://github.com/ReveNoir/Corvak#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.47",
+    "@babel/core": "^7.0.0-beta.47",
+    "@babel/plugin-proposal-decorators": "^7.0.0-beta.47",
+    "@babel/preset-env": "^7.0.0-beta.47",
+    "@babel/node": "^7.0.0-beta.49"
+  },
+  "dependencies": {
+    "@popcorn.moe/migi": "^1.6.0",
+    "dotenv": "^6.0.0"
+  }
+}

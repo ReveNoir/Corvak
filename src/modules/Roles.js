@@ -23,7 +23,7 @@ export default class Roles {
 	}
 
 	@autodelete()
-  	@command(/^role(?: (.*))?$/)
+  @command(/^role(?: (.*))?$/)
 	async role ({ channel, member }, args) {
 		await member.addRoles(this.getRanks(args.split(','))).catch(error => {})
 		channel.send(this.message.text).then(message => message.delete(this.message.time)).catch(console.error)

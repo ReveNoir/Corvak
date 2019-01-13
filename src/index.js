@@ -1,11 +1,17 @@
 require('dotenv').load()
-import Migi from '@popcorn.moe/migi'
 
-const migi = new Migi({
-  root: __dirname
+import Migi from '@popcorn.moe/migi'
+import { Roles, Message } from './modules'
+
+const migi = new Migi({ root: __dirname })
+const loadModules = modules => modules.forEach(module => migi.loadModule(module))
+
+migi.on('ready', () => {
+  migi.settings.prefix = ['+']
+  migi.user.setActivity('EdeniaCraft', { type: 'PLAYING' })
+  console.log(`Connected on ${ migi.user.tag }`)
 })
 
-migi.loadModule()
+loadModules([Roles])
 
-migi.on('ready', () => console.log(`Connected on ${ migi.user.tag }`))
-migi.login(process.env.DISCORD_TOKEN)
+migi.login(process.env.DISCORD_TOKEN).catch(_ => console.log('Error, with Login'))

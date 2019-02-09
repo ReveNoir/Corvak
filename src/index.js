@@ -10,7 +10,15 @@ migi.on('ready', () => {
   migi.settings.prefix = ['+']
   migi.user.setActivity('EdeniaCraft', { type: 'PLAYING' })
   console.log(`Connected on ${ migi.user.tag }`)
+
+  migi.guilds.forEach(guild => {
+    guild.roles.forEach(role => {
+      console.log(`${ role.id } -> ${ role.name }`)
+    })
+  })
 })
+
+
 
 loadModules([Roles])
 

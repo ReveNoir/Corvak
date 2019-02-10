@@ -37,17 +37,19 @@ export default class Roles {
 			case '🚜': callback('532231542278455298'); break;
 			case '🦊': callback('532231674021412904'); break;
 			case '🍺': callback('532231719902904330'); break;
-			case '🍵': callback('532231805277962261'); break;
+			case '📖': callback('532231805277962261'); break;
 			case '🛡': callback('532231848185692182'); break;
 
 			case '💎': callback('498930866077171728'); break;
-			case '💗': callback('498931135179522049'); break;
+			case '🔮': callback('498931135179522049'); break;
 			case '🏹': callback('533427845335220224'); break;
 			case '🤠': callback('498930964572012565'); break;
-			case '💚': callback('532233625635258368'); break;
-			case '🐎': callback('532233657952239617'); break;
+			case '⚜': callback('532233625635258368'); break;
+			case '🐦': callback('532233657952239617'); break;
 			case '👮': callback('495948176537419779'); break;
-			case '✉': callback('543823276745424906'); break;
+			case '🔔': callback('543823276745424906'); break;
+
+			case '🍵': callback('534327864330420234'); break;
 			default: break;
 		}
 	}
@@ -56,7 +58,7 @@ export default class Roles {
 	role () {
 		this.client.guilds.filter(({ id }) => id === '492926234913669131').forEach(({ channels }) => {
 			channels.filter(({ id }) => id === '532230432201244692').forEach(channel => { //532230432201244692 => Demande de role
-				channel.fetchMessages({ around: "544254508801196032", limit: 1 }).then(messages => {
+				channel.fetchMessages({ around: "544280479612797092", limit: 1 }).then(messages => {
 					messages.first().react("😃").catch(console.error)
 					messages.first().react("😵").catch(console.error)
 					messages.first().react("😤").catch(console.error)
@@ -64,25 +66,30 @@ export default class Roles {
 					messages.first().react("😪").catch(console.error)
 				}).catch(console.error)
 
-				channel.fetchMessages({ around: "544254510206418959", limit: 1 }).then(messages => {
+				channel.fetchMessages({ around: "544280481538113547", limit: 1 }).then(messages => {
 					messages.first().react("⛏").catch(console.error)
 					messages.first().react("🌲").catch(console.error)
 					messages.first().react("🚜").catch(console.error)
 					messages.first().react("🦊").catch(console.error)
 					messages.first().react("🍺").catch(console.error)
-					messages.first().react("🍵").catch(console.error)
+					messages.first().react("📖").catch(console.error)
 					messages.first().react("🛡").catch(console.error)
+					messages.first().react("🍵").catch(console.error)
 				}).catch(console.error)
 
-				channel.fetchMessages({ around: "544254511200468993", limit: 1 }).then(messages => {
+				channel.fetchMessages({ around: "544280483001925644", limit: 1 }).then(messages => {
 					messages.first().react("💎").catch(console.error)
-					messages.first().react("💗").catch(console.error)
+					messages.first().react("🔮").catch(console.error)
 					messages.first().react("🏹").catch(console.error)
 					messages.first().react("🤠").catch(console.error)
-					messages.first().react("💚").catch(console.error)
-					messages.first().react("🐎").catch(console.error)
+					messages.first().react("⚜").catch(console.error)
+					messages.first().react("🐦").catch(console.error)
 					messages.first().react("👮").catch(console.error)
-					messages.first().react("✉").catch(console.error)
+					
+				}).catch(console.error)
+
+				channel.fetchMessages({ around: "544280486499975168", limit: 1 }).then(messages => {
+					messages.first().react("🔔").catch(console.error)
 				}).catch(console.error)
 			})
 		})

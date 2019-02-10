@@ -43,8 +43,9 @@ migi.on('ready', () => {
             { name: 'Exploitant', value: ':tractor:', inline: true },
             { name: 'Trappeur', value: ':fox:', inline: true },
             { name: 'Tavernier', value: ':beers:', inline: true },
-            { name: 'Erudit', value: ':tea:', inline: true },
-            { name: 'Armurier', value: ':shield:', inline: true }
+            { name: 'Erudit', value: ':book:', inline: true },
+            { name: 'Armurier', value: ':shield:', inline: true },
+            { name: 'Druide', value: ':tea:', inline: true }
           ],
           timestamp: new Date(),
           footer: {
@@ -61,14 +62,26 @@ migi.on('ready', () => {
           description: 'Pour vous ajouter un role il suffit juste d\'accepter la reactions',
           fields: [
             { name: 'Marchand', value: ':gem:', inline: true },
-            { name: 'Mage', value: ':heartpulse:', inline: true },
+            { name: 'Mage', value: ':crystal_ball:', inline: true },
             { name: 'Combattant', value: ':bow_and_arrow:', inline: true },
             { name: 'Mercenaire', value: ':cowboy:', inline: true },
-            { name: 'Prêtre', value: ':green_heart:', inline: true },
-            { name: 'Celestrier', value: ':horse:', inline: true },
+            { name: 'Prêtre', value: ':fleur_de_lis:', inline: true },
+            { name: 'Celestrier', value: ':bird:', inline: true },
             { name: 'Roleplay', value: ':cop:', inline: true },
-            { name: 'Ping', value: ':envelope:', inline: true }
           ],
+          timestamp: new Date(),
+          footer: {
+            icon_url: migi.user.avatarURL,
+            text: 'Made By Ahkrin_ [L\'imposteur]'
+          }
+        }
+      }).catch(console.error)
+
+      channel.send({
+        embed: {
+          color: 3447003,
+          title: 'Ping',
+          description: 'Pour recevoir régulièrement des notifications du serveur, Cliquez sur: 🔔',
           timestamp: new Date(),
           footer: {
             icon_url: migi.user.avatarURL,
